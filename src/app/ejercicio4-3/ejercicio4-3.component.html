@@ -1,0 +1,30 @@
+<h1>ejercicio4-3</h1>
+
+<dl *ngIf="centros[contador]">
+  <td>Nombre del centro:</td>
+  <dd>{{ centros[contador].nombreCentro }}</dd>
+
+  <td>Localidad:</td>
+  <dd>{{ centros[contador].localidad }}</dd>
+
+  <td>Familias profesionales</td>
+  <dd>{{ centros[contador].familiasProfesionales }}</dd>
+
+  <td>Centro</td>
+  <dd>{{ centros[contador].centro }}</dd>
+
+  <td>Logo</td>
+  <img src="{{ centros[contador].logo }}" alt="ewefsd" width="300" height="200">
+
+</dl>
+
+
+<button *ngIf="contador != 0 && centros.length != 0" type="button" class="btn btn-primary text-bg-success p-3 m-7" (click)="anterior()">Anterior</button>
+<button *ngIf="contador != centros.length-1 && centros.length != 0" type="button" class="btn btn-primary text-bg-success p-3" (click)="posterior()">Posterior</button>
+<button *ngIf="centros.length != 0" type="button" class="btn btn-danger p-3" (click)="eliminar()">Eliminar Posicion</button>
+<button *ngIf="pila.length != 0" type="button" class="btn btn-info p-3 m-7" (click)="insertar()">Insertar Posicion</button>
+
+<h3>Mostrando la pila</h3>
+<ul>
+  <li *ngFor="let centroPila of pila.reverse()" class="list-group-item"><small class="text-danger">Centro: {{ centroPila.nombreCentro }}</small></li>
+</ul>
