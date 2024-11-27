@@ -16,6 +16,10 @@ export class MainPageComponent implements OnInit {
     {
       nombre: 'Krilin',
       fuerza: 150
+    },
+    {
+      nombre: 'Trunks',
+      fuerza: 3500
     }
   ]
 
