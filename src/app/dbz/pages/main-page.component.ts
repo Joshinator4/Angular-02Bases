@@ -20,6 +20,14 @@ export class MainPageComponent implements OnInit {
     {
       nombre: 'Trunks',
       fuerza: 3500
+    },
+    {
+      nombre: 'Vegeta',
+      fuerza: 49000
+    },
+    {
+      nombre: 'Gohan',
+      fuerza: 40000
     }
   ]
 
