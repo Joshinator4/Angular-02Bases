@@ -31,6 +31,9 @@ export class MainPageComponent implements OnInit {
     }
   ]
 
+  public onNewPersonaje(personaje: Personaje): void{
+
+  }
   constructor() { }
 
   ngOnInit() { }
