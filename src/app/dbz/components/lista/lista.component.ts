@@ -18,7 +18,8 @@ export class ListaComponent {
   ]
   //
 
-  //!Output sirve para emitir eventos
+  //!La propiedad de tipo "EventEmitter", necesaria para emitir el evento personalizado, debe ser decorada con @Output. Esto le dice al framework que va a existir una vía de
+  //!comunicación desde el hijo al padre.
   @Output()
   public onBorrarPersonaje: EventEmitter<number> = new EventEmitter();
   //!Este metodo recibe el indice de la lista. Lo recibimos desde lista.component.html con el indice generado por el ngFor let i = index
