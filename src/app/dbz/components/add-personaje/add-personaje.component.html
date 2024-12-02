@@ -1,4 +1,5 @@
   <h4>Añadir Personaje</h4>
+  <!-- Se realiza el (ngSubmit) para que cuando se le pulse al boton de tipo submit de mas abajo llame al metodo addPersonaje()-->
   <form class="row" (ngSubmit)="addPersonaje()">
     <input type="text"
       [(ngModel)]="personaje.nombre" name="nombre"

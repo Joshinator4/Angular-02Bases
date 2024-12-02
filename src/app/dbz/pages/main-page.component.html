@@ -4,10 +4,12 @@
 <div class="row">
   <div class="col">
     <!-- <dbz-lista></dbz-lista> AQUI PASA LOS VALORES POR DEFECTO QUE TIENE LA COMPONENTE LISTA, en la clase ListaComponent -->
-    <dbz-lista [listaPersonajes]="personajes"></dbz-lista> <!--AQUI bindea la lista que se ha creado en la propiedad personajes de la clase de main-page.component en la propiedad listaPersonajes de la clase ListaComponent, que a su vez tiene el decorador @Input para poder bindearlo aqui.-->
+     <!-- Se añade el evento (onBorrarPersonaje)="borrarPersonaje($event)" y se llama al evento de la clase de lista.component.ts que nos emite un indice de la lista-->
+    <dbz-lista [listaPersonajes]="personajes" (onBorrarPersonaje)="borrarPersonaje($event)"></dbz-lista> <!--AQUI bindea la lista que se ha creado en la propiedad personajes de la clase de main-page.component en la propiedad listaPersonajes de la clase ListaComponent, que a su vez tiene el decorador @Input para poder bindearlo aqui.-->
   </div>
 
   <div class="col">
+    <!-- Se añade el evento (onNewPersonaje)="onNewPersonaje($event)" y se llama al evento de la clase de add-personaje.component.ts que nos emite personaje con el atributo nombre y fuerza, que lo coge de lo introducido en el html-->
     <dbz-add-personaje (onNewPersonaje)="onNewPersonaje($event)"></dbz-add-personaje>
   </div>
 

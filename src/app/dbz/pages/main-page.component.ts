@@ -30,13 +30,19 @@ export class MainPageComponent implements OnInit {
       fuerza: 40000
     }
   ]
-
+  //!Este metodo servirá para recibir el evento de add-personaje.component.ts recibe un personaje y lo añade a la lista
   public onNewPersonaje(personaje: Personaje): void{
     // console.log('MainPage')
     // console.log(personaje);
 
     this.personajes.push(personaje)
   }
+  //!Este metodo servirá para recibir el evento de lista.component.ts recibe un indice de la lista y lo elimina con el metodo splice()
+  public borrarPersonaje(indice:number): void{
+    //!El indice le marca la posicion, y el 1 le marca que se eliminará 1 elemento
+    this.personajes.splice(indice, 1)
+  }
+
   constructor() { }
 
   ngOnInit() { }

@@ -14,8 +14,9 @@
       'list-group-item-danger': esUltimo}">
       <span>{{ personaje.nombre }} -</span> <strong> Fuerza: </strong>
       <span>{{ personaje.fuerza }} </span>
-      <span>Indice: {{ i }} - Es par: {{ esPar }} -  Es el último: {{esUltimo}} </span>
-      <button class="btn btn-danger">X</button>
+      <span>Indice: {{ i+1 }} - Es par: {{ esPar }} -  Es el último: {{esUltimo}} </span>
+      <!--Cuando se pulse el boton se llama al metodo pasarIndice() esta en la clase lista.component.ts.-->
+      <button class="btn btn-danger" (click)="pasarIndice(i)">X</button>
     </li>
 
   </ul>
