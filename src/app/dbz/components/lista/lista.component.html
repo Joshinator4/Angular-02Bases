@@ -7,7 +7,7 @@
     let esUltimo=last,
     let esPrimero=first,
     let esImpar=odd"
-    class="list-group-item" [ngClass]="{
+    class="list-group-item d-flex justify-content-between alaign-items-center" [ngClass]="{
       'list-group-item-success':esImpar,
       'list-group-item-primary': esPar,
       'list-group-item-info':esPrimero,
@@ -15,6 +15,7 @@
       <span>{{ personaje.nombre }} -</span> <strong> Fuerza: </strong>
       <span>{{ personaje.fuerza }} </span>
       <span>Indice: {{ i }} - Es par: {{ esPar }} -  Es el último: {{esUltimo}} </span>
+      <button class="btn btn-danger">X</button>
     </li>
 
   </ul>

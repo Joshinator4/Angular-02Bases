@@ -18,12 +18,17 @@ export class AddPersonajeComponent {
   }
 
   public addPersonaje():void{
+
+    debugger;
+
     console.log(this.personaje);
 
     if(this.personaje.nombre.length === 0) return;
 
     this.onNewPersonaje.emit(this.personaje)
-    this.personaje.nombre = "",
-    this.personaje.fuerza = 0
+    this.personaje = {
+      nombre: "",
+      fuerza: 0
+    };
   }
 }
