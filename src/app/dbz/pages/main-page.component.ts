@@ -39,8 +39,8 @@ export class MainPageComponent implements OnInit {
   }
   //!Este metodo servirá para recibir el evento de lista.component.ts recibe un indice de la lista y lo elimina con el metodo splice()
   public borrarPersonaje(indice:number): void{
-    //!El indice le marca la posicion, y el 1 le marca que se eliminará 1 elemento
-    this.personajes.splice(indice, 1)
+    //!El índice le marca la posición, y el 1 le marca que se eliminará 1 elemento, mostrando el elemento eliminado en la consola
+    console.log(this.personajes.splice(indice, 1));
   }
 
   constructor() { }
