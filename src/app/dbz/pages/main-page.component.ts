@@ -31,7 +31,7 @@ export class MainPageComponent implements OnInit {
     }
   ]
   //!Este metodo servirá para recibir el evento de add-personaje.component.ts recibe un personaje y lo añade a la lista
-  public onNewPersonaje(personaje: Personaje): void{
+  public newPersonaje(personaje: Personaje): void{
     // console.log('MainPage')
     // console.log(personaje);
 
