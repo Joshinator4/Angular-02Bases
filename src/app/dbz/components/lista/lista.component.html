@@ -16,7 +16,7 @@
       <span>{{ personaje.fuerza }} </span>
       <span>Indice: {{ i+1 }} - Es par: {{ esPar }} -  Es el último: {{esUltimo}} </span>
       <!--Cuando se pulse el boton se llama al metodo pasarIndice() esta en la clase lista.component.ts.-->
-      <button class="btn btn-danger" (click)="pasarIndice(i)">X</button>
+      <button class="btn btn-danger" (click)="pasarId(personaje.id)">X</button>
     </li>
 
   </ul>

@@ -15,13 +15,14 @@ export class AddPersonajeComponent {
 
 
   public personaje: Personaje = {
+    id: "",
     nombre: "",
     fuerza: 0
   }
   //!Este metodo es el que se llama en el add-personaje.component.html
   public addPersonaje():void{
 
-    debugger;
+    // debugger;
 
     console.log(this.personaje);
 
@@ -31,6 +32,7 @@ export class AddPersonajeComponent {
     this.onNewPersonaje.emit(this.personaje)
     //!Para no pasar la referencia se crea un nuevo personaje con = {} con los valores vacíos en este caso
     this.personaje = {
+      id: "",
       nombre: "",
       fuerza: 0
     };

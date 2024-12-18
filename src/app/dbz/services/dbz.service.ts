@@ -44,12 +44,24 @@ export class DbzService {
     // console.log('MainPage')
     // console.log(personaje);
     //!Se hace aqui el id: uuid() y no en el add-personaje.component.ts porque normalmente aquí se va a hacer la conexión a la BBDD y normalmente el id lo generará la BBDD
-    const newPersonaje: Personaje ={id: uuid(), ...personaje}; //...personaje es lo mismo que hacer personaje.id, personaje.nombre, personaje.fuerza
-    this.personajes.push(newPersonaje);
+    // const newPersonaje: Personaje ={id: uuid(), ...personaje}; //...personaje es lo mismo que hacer personaje.id, personaje.nombre, personaje.fuerza
+    // const newPersonaje: Personaje ={
+    // id: uuid(),
+    // nombre: personaje.nombre
+    // fuerza: personaje.fuerza
+    // }
+    personaje.id = uuid();
+    // this.personajes.push(newPersonaje);
+    this.personajes.push(personaje);
   }
   //!Este metodo servirá para recibir el evento de lista.component.ts recibe un indice de la lista y lo elimina con el metodo splice()
-  public borrarPersonaje(indice:number): void{
+  // public borrarPersonaje(indice:number): void{
     //!El índice le marca la posición, y el 1 le marca que se eliminará 1 elemento, mostrando el elemento eliminado en la consola
-    console.log(this.personajes.splice(indice, 1));
+    // console.log(this.personajes.splice(indice, 1));
+  // }
+
+  //!Este metodo servirá para recibir el evento de lista.component.ts recibe un id del personaje y lo elimina se usa filter para recorrer la lista y quedarnos unicamente con los elemntos de la lista que el atributo id no coincida con el id pasado por parámetro
+  public borrarPersonajeById(id: string):void{
+    this.personajes = this.personajes.filter(item => item.id !== id);
   }
 }
