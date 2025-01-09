@@ -37,6 +37,11 @@ export class DbzService {
       id: uuid(),
       nombre: 'Gohan',
       fuerza: 40000
+    },
+    {
+      id: uuid(),
+      nombre: 'Antonio',
+      fuerza: -57
     }
   ]
   //!Este metodo servirá para recibir el evento de add-personaje.component.ts recibe un personaje y lo añade a la lista
