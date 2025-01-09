@@ -10,14 +10,8 @@ import { Personaje } from '../../interfaces/personaje.interface';
 export class ListaComponent {
   //!El input sirve para recibir posibles eventos
   @Input()
-  public listaPersonajes: Personaje[] = [
-    {
-      id: '',
-      nombre: 'Trunks',
-      fuerza: 3500
-    }
-  ]
-  //
+  public listaPersonajes: Personaje[] = []
+
 
   //!La propiedad de tipo "EventEmitter", necesaria para emitir el evento personalizado, debe ser decorada con @Output. Esto le dice al framework que va a existir una vía de
   //!comunicación desde el hijo al padre.
